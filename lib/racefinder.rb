@@ -1,5 +1,10 @@
-RACES = {"France" => "Paris", "Germany" => "Berlin", "Italy" => "Rome"}
+RACES = {"France" => :race, "Germany" => :another_race}
 
 def search(country)
-  RACES[country]
+  @races[country]
+end
+
+def input_race(location, race)
+  @races ||= {}
+  @races[location] = race
 end
