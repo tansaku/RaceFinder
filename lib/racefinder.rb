@@ -1,10 +1,15 @@
-RACES = {"France" => :race, "Germany" => :another_race}
+class RaceFinder
 
-def search(country)
-  @races[country]
-end
+  def initialize
+    @races = {}
+  end
 
-def input_race(location, race)
-  @races ||= {}
-  @races[location] = race
+  def search(country)
+    @races[country]
+  end
+
+  def input_race(location, race)
+    @races[location] = race
+  end
+
 end
