@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+<h1>RaceFinder</h1>
+<form action='/search'>
+  <input type='search'></input>
+  <input type='submit' value='Search'>
+</form>
+<h2>Upcoming Events</h2>
+<races>
+  <ul>
+  <% @events.each do |event| %>
+  <li><a href="/events/paris"><%= event.location %> <%= event.name %> <%= event.year %></a></li>
+  <% end %>
+  </ul>
+</races>
+</body>
+</html>
